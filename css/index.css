@@ -1,0 +1,373 @@
+* {
+  font-family: "Shippori Mincho", serif;
+}
+/* header */
+.header {
+  background-image: url(../img/firstview.png);
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  width: 1200px;
+}
+.header-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 36px;
+}
+.header-nav-list {
+  display: flex;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(158, 158, 158);
+}
+.shop-name {
+  font-size: 24px;
+  padding: 15px;
+}
+.header-nav-item {
+  font-size: 16px;
+  padding-right: 60px;
+}
+.header-nav-item:first-child {
+  padding-left: 80px;
+}
+.catch-copy {
+  font-size: 40px;
+  position: absolute;
+  color: white;
+  left: 150px;
+  top: 330px;
+}
+.catch-copy-season {
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  left: 160px;
+  top: 390px;
+}
+.menu,
+.drawer-nav-in {
+  display: none;
+}
+/* main */
+main {
+  background: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
+  width: 1200px;
+}
+.wrap {
+  width: 100%;
+}
+.wrap-cards {
+  display: flex;
+}
+.wrap-item {
+  width: 33.33%;
+  position: relative;
+}
+.wrap-picure {
+  display: block;
+}
+.wrap-ttl {
+  position: absolute;
+  font-size: 26px;
+  color: white;
+  bottom: 80px;
+  padding: 15px;
+}
+.wrap-text {
+  position: absolute;
+  font-size: 16px;
+  color: white;
+  bottom: 20px;
+  padding: 15px;
+}
+/*Styels*/
+.styles-wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+.styles-ttl {
+  font-size: 40px;
+  color: white;
+  padding: 40px 100px;
+}
+.styles-glid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 100px;
+}
+.styles-item {
+  width: 33%;
+  padding: 10px 0;
+}
+/*about*/
+.bottom-wapper {
+  width: 100%;
+  background-color: black;
+}
+.world-box {
+  display: flex;
+  padding: 50px 0;
+}
+.world-pic {
+  width: 60%;
+  margin-left: 50px;
+}
+.world-text-box {
+  color: white;
+  margin: 30px 80px;
+}
+.world-ttl__eng {
+  font-size: 26px;
+  line-height: 50px;
+  padding-top: 60px;
+}
+.World-ttl__jp {
+  font-size: 40px;
+  line-height: 60px;
+}
+.world-text__up {
+  margin-top: 40px;
+  line-height: 30px;
+}
+.world-text__bottom {
+  margin-top: 20px;
+  line-height: 30px;
+}
+.about-btn {
+  display: block;
+  border: 2px solid white;
+  padding: 20px 30px;
+  width: 110px;
+  margin-top: 20px;
+}
+/*footer*/
+.footer {
+  color: white;
+  background-color: black;
+  width: 1200px;
+  height: 30px;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+}
+/*ハンバーガメニュ↓*/
+@media screen and (max-width: 768px) {
+  .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    z-index: 10;
+    margin-left: 500px;
+  }
+  .menu__line--top,
+  .menu__line--middle,
+  .menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .menu__line--top {
+    top: 0;
+  }
+  .menu__line--middle {
+    top: 14px;
+  }
+  .menu__line--bottom {
+    bottom: 0;
+  }
+  .menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+  .menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+  .drawer-nav-in {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: rgb(151, 151, 151);
+    transition: 0.7s;
+    text-align: center;
+  }
+  .in {
+    transform: translateX(100%);
+  }
+  .drawer-nav-list {
+    padding-top: 80px;
+    text-align: center;
+  }
+  .drawer-nav-item {
+    list-style-type: none;
+    margin-top: 50px;
+  }
+
+  .header-nav-list {
+    display: none;
+  }
+  .drawer-nav-item {
+    margin-top: 40px;
+  }
+  .drawer-nav-link {
+    color: #0033cc;
+    font-size: 18px;
+  }
+  /*レスポンシブその他*/
+  .header {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  .wrap-picture {
+    display: block;
+    width: 100%;
+  }
+  .shop-name {
+    font-size: 40px;
+    padding: 15px;
+  }
+  .catch-copy {
+    font-size: 60px;
+    position: absolute;
+    color: white;
+    left: 150px;
+    top: 330px;
+  }
+  .catch-copy-season {
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    left: 160px;
+    top: 400px;
+  }
+  .world-pic {
+    width: 40%;
+    height: 40%;
+    margin: 40px 0 0 40px;
+  }
+  .world-text-box {
+    margin: 0px 35px;
+  }
+  .world-ttl__eng {
+    padding-top: 0px;
+  }
+  .footer {
+    width: 100%;
+  }
+  .wrap-ttl {
+    font-size: 20px;
+    bottom: 30px;
+  }
+  .wrap-text {
+    display: none;
+  }
+  .styles-item {
+    width: 48%;
+    padding: 1%;
+  }
+  .styles-item__pic {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop-name {
+    font-size: 40px;
+    padding: 15px;
+  }
+  .catch-copy {
+    font-size: 60px;
+    position: absolute;
+    color: white;
+    left: 90px;
+    top: 240px;
+  }
+  .catch-copy-season {
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    left: 100px;
+    top: 310px;
+  }
+  .menu {
+    margin-left: 220px;
+  }
+  .wrap-cards {
+    display: block;
+  }
+  .wrap-item {
+    width: 100%;
+  }
+  .styles-ttl {
+    padding: 20px 20px;
+  }
+  .styles-glid {
+    margin: 0 20px;
+  }
+  .styles-item {
+    width: 48%;
+    padding: 10px 4px;
+  }
+  .world-box {
+    display: block;
+    padding: 30px 20px;
+  }
+  .world-pic {
+    width: 100%;
+    height: 40%;
+    margin: 0;
+  }
+  .world-text-box {
+    margin: 0px 30px;
+  }
+  .world-ttl__eng {
+    padding: 20px 70px;
+  }
+  .World-ttl__jp {
+    font-size: 45px;
+    padding: 0px 50px;
+  }
+  .about-btn {
+    margin: 30px auto;
+  }
+  .drawer-nav-in {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 99%;
+    top: 0;
+    left: -100%;
+    background: rgb(151, 151, 151);
+    transition: 0.7s;
+    text-align: center;
+  }
+  .drawer-nav-item {
+    list-style-type: none;
+    margin: 50px 10px 0px 370px;
+  }
+}
